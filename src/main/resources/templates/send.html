@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Mail User Agent</title>
+    <link href="webjars/bootstrap/4.4.1-1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav">
+    <a class="nav-link active">Sender</a>
+    <a class="nav-link" href="/get">Receiver</a>
+</nav>
+
+<div class="container col-md-5">
+    <form method="post">
+        <div class="form-group">
+            <label for="ToEmailInput" class="col-form-label">Recipient Email address</label>
+            <input type="email" class="form-control" id="ToEmailInput"
+                   placeholder="recipient@example.com" required name="recipientEmail">
+        </div>
+        <div class="form-group">
+            <label for="SubjectInput" class="col-form-label">Subject</label>
+            <input type="text" class="form-control" id="SubjectInput"
+                   placeholder="Subject" name="subject">
+        </div>
+        <div class="form-group">
+            <label for="BodyInput" class="col-form-label">Body</label>
+            <textarea class="form-control" id="BodyInput"
+                      rows="3" name="body"></textarea>
+        </div>
+        <div class="form-group">
+            <div>
+                <button type="submit" class="btn btn-primary" id="btnSend">Send mail</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

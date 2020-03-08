@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="webjars/bootstrap/4.4.1-1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container col-6">
+    <form action="send">
+        <div class="form-group">
+            <label for="EmailInput">Email address</label>
+            <input type="email" name="email" class="form-control" required
+                   id="EmailInput" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="UsernameInput">Username</label>
+            <input type="text" class="form-control" name="username"
+                   id="UsernameInput" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+            <label for="PasswordInput">Password</label>
+            <input type="password" class="form-control" name="password"
+                   id="PasswordInput" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="webjars/bootstrap/4.4.1-1/css/bootstrap.min.css" rel="stylesheet">
+    <title>Get</title>
+</head>
+<body>
+<nav class="nav">
+    <a class="nav-link" href="/send">Sender</a>
+    <a class="nav-link active">Receiver</a>
+</nav>
+
+<div class="container-fluid col-3">
+    <div class="list-group">
+        <form th:each="message : ${messages}" class="list-group-item bg-light" action="message">
+            <div class="form-group">
+                <input name="id" th:value="${message.getId()}" hidden>
+            </div>
+            <div class="form-group">
+                <h5 th:text="${message.getSubject()}">
+                </h5>
+                <h6 class="text-muted" th:text="${message.getSenderEmail()}">
+                </h6>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">VIEW MESSAGE</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

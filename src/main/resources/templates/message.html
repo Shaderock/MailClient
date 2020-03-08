@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="webjars/bootstrap/4.4.1-1/css/bootstrap.min.css" rel="stylesheet">
+    <title>Message</title>
+</head>
+<body>
+
+<nav class="nav">
+    <a class="nav-link" href="/send">Sender</a>
+    <a class="nav-link" href="/get">Receiver</a>
+</nav>
+
+<div class="container-fluid col-md-9">
+    <div class="container-fluid card border-dark bg-light" id="messageContent">
+        <h5 class="card-header" th:text="${message.getSubject()}"></h5>
+        <div class="card-body">
+            <h6 class="card-title text-muted" th:text="${message.getSenderEmail()}"></h6>
+            <p class="card-text" th:utext="${message.getText()}"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
